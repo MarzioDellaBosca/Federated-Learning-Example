@@ -119,7 +119,7 @@ class Client:
         ip_list = []
     
         print(" Reaching the server...")
-        target_ip = self.network_finder() #"192.168.1.1/24"
+        target_ip = self.network_finder() 
         arp = ARP(pdst=target_ip)                                               # scansione Address Resolution Protocol (ARP)
         ether = Ether(dst="ff:ff:ff:ff:ff:ff")                                  # pacchetto ethernet indirizzo MAC broadcast
         packet = ether/arp
